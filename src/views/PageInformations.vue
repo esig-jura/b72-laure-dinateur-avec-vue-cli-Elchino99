@@ -49,4 +49,12 @@ export default {};
 h1 {
   text-align: center;
 }
+@media only screen and (min-width: 480px) {
+  /* Habillage flottant pour l'image de la page infos*/
+  .page-infos .profile-photo {
+    float: left; /* pas oublier overflow: auto au parent */
+    margin: 0 5% 20px 0;
+  }
+} /* min-width: 480px */
+
 </style>

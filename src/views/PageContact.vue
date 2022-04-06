@@ -80,4 +80,18 @@ http://www.w3schools.com/css/css_attribute_selectors.asp
 .contact-info li a[href*="facebook"] {
   background-image: url(../../public/img/facebook.png);
 }
+@media only screen and (min-width: 480px) {
+  .page-contact .col1,
+  .page-contact .col2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+
+  }
+  .page-contact .col2 {
+    width: 40%;
+    margin-left: 10%;
+  }
+} /* min-width: 480px */
+
 </style>
