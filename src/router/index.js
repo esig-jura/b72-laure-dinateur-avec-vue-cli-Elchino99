@@ -5,28 +5,18 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue'),
-  },
-  {
-    path: '/About',
-    name: 'About',
-    component: () => import('../views/About.vue'),
-  },
-  {
-    path: '/PageAccueil',
-    name: 'PageAccueil',
+    path: '/Accueil',
+    name: 'Accueil',
     component: () => import('../views/PageAccueil.vue'),
   },
   {
-    path: '/PageInformations',
-    name: 'PageInformations',
+    path: '/Informations',
+    name: 'Informations',
     component: () => import('../views/PageInformations.vue'),
   },
   {
-    path: '/PageContact',
-    name: 'PageContact',
+    path: '/Contact',
+    name: 'Contact',
     component: () => import('../views/PageContact.vue'),
   },
 ];
