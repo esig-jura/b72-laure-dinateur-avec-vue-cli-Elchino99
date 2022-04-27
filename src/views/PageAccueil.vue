@@ -16,11 +16,12 @@
 
       <ul class="realisations">
         <realisation
-          v-for="reali in realisation"
+          v-for="(reali, index) in realisation"
           :key="reali.image"
           :image="reali.image"
           :titre="reali.titre"
           :description="reali.description"
+          @supprimer="realisation.splice(index, 1)"
         ></realisation>
       </ul>
     </main>
@@ -64,6 +65,9 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    document.title = 'Laure Dinateur | Graphiste';
   },
 };
 </script>

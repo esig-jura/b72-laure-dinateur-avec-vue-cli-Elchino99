@@ -42,7 +42,12 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: 'PageContact.vue',
+  mounted() {
+    document.title = 'Laure Dinateur | contact';
+  },
+};
 </script>
 
 <style scoped>

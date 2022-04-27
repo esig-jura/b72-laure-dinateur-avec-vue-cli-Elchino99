@@ -36,7 +36,12 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name: 'PageInformations.vue',
+  mounted() {
+    document.title = 'Laure Dinateur | information';
+  },
+};
 </script>
 
 <style scoped>
