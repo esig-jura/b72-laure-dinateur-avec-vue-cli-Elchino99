@@ -15,22 +15,25 @@
       <h1>Mes réalisations</h1>
 
       <ul class="realisations">
-        <li v-for="reali in realisation" :key="reali.image">
-          <a :href="reali.image">
-            <figure>
-              <img :src="reali.image" :alt="reali.titre">
-              <figcaption>{{reali.description}}</figcaption>
-            </figure>
-          </a>
-        </li>
+        <realisation
+          v-for="reali in realisation"
+          :key="reali.image"
+          :image="reali.image"
+          :titre="reali.titre"
+          :description="reali.description"
+        ></realisation>
       </ul>
     </main>
     </body>
   </div>
 </template>
 <script>
+import Realisation from '@/components/realisation.vue';
+
 export default {
   name: 'PageAcceuil.vue',
+  components: { Realisation },
+
   data() {
     return {
       realisation: [
@@ -71,28 +74,4 @@ export default {
   margin: 0;
   padding: 0;
 }
-.realisations li {
-  display: inline-block;
-  width: 45%;
-  margin: 2.5%;
-  vertical-align: top;
-}
-.realisations li a {
-  color: #011627;
-}
-.realisations figure {
-  margin: 0;
-  background-color: #e7e9eb;
-}
-.realisations figcaption {
-  padding: 10px;
-  font-size: 1rem;
-}
-@media only screen and (min-width: 480px) {
-  /*Passage sur 3 cols*/
-  .realisations li {
-    width: calc(100%/3 - 5%);
-  }
-} /* min-width: 480px */
-
 </style>
